@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css')}}" />
+    <!-- tylko do sprawdzenia na live serer -->
+    <link rel="stylesheet" type="text/css" href="../static/style.css" />
+    <!--  -->
+  </head>
+  <body>
+    <h5>Currency Calculator</h5>
+    <p id="p"></p>
+    <form action="/" method="POST">
+      <select id="currency" name="currency">
+        {% for row in bid %}
+        <option>{{row}}</option>
+        {% endfor %}
+      </select>
+      <input
+        name="amount"
+        type="number"
+        autocomplete="off"
+        placeholder="amount" /><br />
+      <div><button type="submit">calculate</button></div>
+    </form>
+    {%if result%}
+    <p>You have to spend {{result}} PLN</p>
+    {%endif%}
+  </body>
+  <script>
+    const text = "How much PLN do i have to spend to buy...";
+
+    let index = 0;
+
+    function writeText() {
+      document.getElementById("p").innerText = text.slice(0, index);
+      index++;
+      if (index > text.lenght) {
+        index = 0;
+      }
+    }
+    setInterval(writeText, 100);
+  </script>
+</html>

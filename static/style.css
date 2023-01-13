@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+body {
+  background-color: rgb(247, 218, 175);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5em;
+}
+
+h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border: 0;
+  background-color: rgb(216, 184, 137);
+  border-radius: 30px;
+  margin-top: 10px;
+  color: rgb(78, 78, 78);
+}
+
+select {
+  border: 0;
+  background-color: rgb(216, 184, 137);
+  border-radius: 30px;
+  appearance: none;
+  padding: 3px;
+  color: rgb(78, 78, 78);
+}
+
+input {
+  border: 0;
+  background-color: rgb(216, 184, 137);
+  border-radius: 30px;
+  appearance: none;
+  padding: 3px;
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::placeholder {
+  color: rgb(78, 78, 78);
+}
